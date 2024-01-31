@@ -7,14 +7,15 @@ while True:
 2 - List all contacts
 3 - List favorite contacts
 4 - Edit contact
-5 - Add to favorite
-6 - Delete from favorite
+5 - Add to favorites
+6 - Delete from favorites
 7 - Delete contact
 8 - Exit ->
 ===============================
          """)
     option = input("Choose one option: ")
     if option == "1":
+        print("\n******** Create a new contact ********")
         name = input("Insert a name: ")
         phone = input("Insert a phone: ")
         email = input("Insert an e-mail: ")
@@ -35,6 +36,7 @@ while True:
          contacts = notebook.list_contacts()
 
          if contacts > 0:
+             print("\n******** Edit contact ********\n")
              index = input("Update this contact: ")
              name = input("Contact new name: ")
              phone = input("Contact new phone: ")
@@ -46,14 +48,16 @@ while True:
         not_favorites = notebook.list_not_favorites()
 
         if not_favorites > 0:
+            print("\n******** Add to favorites ********\n")
             index = input("Add this contact to favorite list: ")
             notebook.add_to_favorites(index)
 
     elif option == "6":
-        print("\n******** Contacts ********")
+        print("\n******** Contacts ********\n")
         favorites = notebook.list_favorites()
 
         if favorites > 0:
+            print("\n******** Delete from favorites ********\n")
             index = input("Remove this contact from favorites: ")
             notebook.remove_from_favorites(index)
 
@@ -62,6 +66,7 @@ while True:
         contacts = notebook.list_contacts()
 
         if contacts > 0:
+            print("\n******** Delete contact ********\n")
             index = input("Delete this contact: ")
             notebook.delete_contact(index)
 

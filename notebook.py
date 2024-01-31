@@ -12,7 +12,7 @@ def list_contacts():
         for index, contact in enumerate(contacts, start=1):
             print(f"{index} - ", contact.to_string())
     else:
-        print("You have no contacts!\n")
+        print("You have no contacts!\n\n")
         
     return len(contacts)
 
@@ -24,7 +24,7 @@ def list_favorites():
             print(f"{index} - ", contact.to_string())
 
     if favorites == 0:
-        print("You have no favorites!")
+        print("You have no favorites!\n\n")
         
     return favorites
 
@@ -36,7 +36,7 @@ def list_not_favorites():
             print(f"{index} - ", contact.to_string())
 
     if not_favorites == 0:
-        print("All contacts are favorites!")
+        print("You have no contact marked as favorite!\n\n")
 
     return not_favorites
 
