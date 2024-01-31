@@ -13,6 +13,8 @@ def list_contacts():
             print(f"{index} - ", contact.to_string())
     else:
         print("You have no contacts!\n")
+        
+    return len(contacts)
 
 def list_favorites():
     favorites = 0
@@ -37,9 +39,6 @@ def list_not_favorites():
         print("All contacts are favorites!")
 
     return not_favorites
-#//TODO
-def contacts_size():
-    return len(contacts)
 
 def edit_contact(index, name, phone, email, favorite=False):
     relative_index  = int(index) - 1
@@ -61,13 +60,13 @@ def delete_contact(index):
 
     print(f"Contact {name} deleted!")
 
-def add_to_favorite(index):
+def add_to_favorites(index):
     relative_index  = int(index) - 1
     if relative_index >= 0 and relative_index < len(contacts):
         contacts[relative_index].set_favorite()
         print(f"{contacts[relative_index].name} is now favorite!")
 
-def remove_from_favorite(index):
+def remove_from_favorites(index):
     relative_index  = int(index) - 1
     if relative_index >= 0 and relative_index < len(contacts):
         contacts[relative_index].unset_favorite()

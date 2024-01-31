@@ -48,7 +48,7 @@ while True:
 
         if not_favorites > 0:
             index = input("Add this contact to favorite list: ")
-            notebook.add_to_favorite(index)
+            notebook.add_to_favorites(index)
 
     elif option == "6":
         print("\n******** Contacts ********")
@@ -56,10 +56,15 @@ while True:
 
         if favorites > 0:
             index = input("Remove this contact from favorites: ")
-            notebook.remove_from_favorite(index)
+            notebook.remove_from_favorites(index)
 
     elif option == "7":
-        print("OPTION", option)
+        print("\n******** Contacts ********")
+        contacts = notebook.list_contacts()
+
+        if contacts > 0:
+            index = input("Delete this contact: ")
+            notebook.delete_contact(index)
 
     elif option == "8":
         break
