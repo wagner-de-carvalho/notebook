@@ -10,9 +10,9 @@ def add_contact(name, phone, email, favorite=False):
 def list_contacts():
     if len(contacts) > 0:
         for contact in contacts:
-            print(contact.to_string() + "\n")
+            print(contact.to_string())
     else:
-        print("You have no contacts!")
+        print("You have no contacts!\n")
 
 def list_favorites():
     favorites = 0

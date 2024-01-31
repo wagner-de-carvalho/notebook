@@ -12,6 +12,6 @@ class Contact:
         self.favorite = False
     
     def to_string(self):
-        return f"Name: {self.get_name()}\Phone: {self.get_phone()}\E-mail: {self.get_email()}\nFavorite: {self.get_favorite()}"
+        return f"Name: {self.name}\nPhone: {self.phone}\nE-mail: {self.email}\nFavorite: {self.favorite}\n"
 
 

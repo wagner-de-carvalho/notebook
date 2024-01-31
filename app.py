@@ -37,4 +37,4 @@ while True:
     elif option == "8":
         break
 
-print("\nApplication closed\n")
+print("\nApplication closed!\n")
