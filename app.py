@@ -29,6 +29,11 @@ while True:
         email = input("Insert an e-mail: ")
         notebook.add_contact(name, phone, email)
 
+    elif option == "2":
+        print("\n******** Contacts ********")
+        notebook.list_contacts()
+        print("****************************\n")
+
     elif option == "8":
         break
 

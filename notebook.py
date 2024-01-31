@@ -8,8 +8,11 @@ def add_contact(name, phone, email, favorite=False):
     print(f"{contact.name} added as a new contact!")
 
 def list_contacts():
-    for contact in contacts:
-        print(contact.to_string() + "\n")
+    if len(contacts) > 0:
+        for contact in contacts:
+            print(contact.to_string() + "\n")
+    else:
+        print("No contacts")
 
 def list_favorites():
     for contact in contacts:
