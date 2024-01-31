@@ -19,9 +19,10 @@ def list_favorites():
     for contact in contacts:
         if contact.favorite:
             favorites += 1
-            print(contact.to_string() + "\n")
-        elif favorites == 0:
-            print("You have no favorites!")
+            print(contact.to_string())
+            
+    if favorites == 0:
+        print("You have no favorites!")
 
 def edit_contact(index, name, phone, email, favorite=False):
     relative_index  = int(index) - 1

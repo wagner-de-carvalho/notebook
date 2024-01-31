@@ -34,6 +34,11 @@ while True:
         notebook.list_contacts()
         print("****************************\n")
 
+    elif option == "3":
+        print("\n******** Favorites ********")
+        notebook.list_favorites()
+        print("****************************\n")
+
     elif option == "8":
         break
 
