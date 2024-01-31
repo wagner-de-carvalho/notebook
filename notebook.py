@@ -6,7 +6,6 @@ def add_contact(name, phone, email, favorite=False):
     contact =  Contact(name, phone, email, favorite)
     contacts.append(contact)
     print(f"{contact.name} added as a new contact!")
-    return
 
 def list_contacts():
     for contact in contacts:
@@ -41,10 +40,12 @@ def set_as_favorite(index):
     relative_index  = int(index) - 1
     if relative_index >= 0 and relative_index < len(contacts):
         contacts[relative_index].set_favorite()
+        print(f"{contacts[relative_index].name} is now favorite!")
 
 def unset_as_favorite(index):
     relative_index  = int(index) - 1
     if relative_index >= 0 and relative_index < len(contacts):
         contacts[relative_index].unset_favorite()
+        print(f"{contacts[relative_index].name} is no longer favorite!")
 
     
