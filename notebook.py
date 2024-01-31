@@ -23,6 +23,8 @@ def list_favorites():
 
     if favorites == 0:
         print("You have no favorites!")
+        
+    return favorites
 
 def list_not_favorites():
     not_favorites = 0
@@ -34,6 +36,10 @@ def list_not_favorites():
     if not_favorites == 0:
         print("All contacts are favorites!")
 
+    return not_favorites
+#//TODO
+def contacts_size():
+    return len(contacts)
 
 def edit_contact(index, name, phone, email, favorite=False):
     relative_index  = int(index) - 1

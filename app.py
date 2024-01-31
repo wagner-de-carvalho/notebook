@@ -3,8 +3,8 @@ import notebook
 """
 - Deve ser possível adicionar um contato x
 - Deve ser possível visualizar a lista de contatos cadastrados x
-- Deve ser possível editar um contato x
-- Deve ser possível marcar/desmarcar um contato como favorito x
+- Deve ser possível editar um contato 
+- Deve ser possível marcar/desmarcar um contato como favorito 
 - Deve ser possível ver uma lista de contatos favoritos x
 - Deve ser possível apagar um contato
 """
@@ -43,10 +43,20 @@ while True:
         print("OPTION", option)
 
     elif option == "5":
-        print("OPTION", option)
+        print("\n******** Contacts ********")
+        not_favorites = notebook.list_not_favorites()
+
+        if not_favorites > 0:
+            index = input("Add this contact to favorite list: ")
+            notebook.add_to_favorite(index)
 
     elif option == "6":
-        print("OPTION", option)
+        print("\n******** Contacts ********")
+        favorites = notebook.list_favorites()
+
+        if favorites > 0:
+            index = input("Remove this contact from favorites: ")
+            notebook.remove_from_favorite(index)
 
     elif option == "7":
         print("OPTION", option)
