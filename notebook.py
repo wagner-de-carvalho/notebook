@@ -26,4 +26,13 @@ def edit_contact(index, name, phone, email, favorite=False):
         contacts[relative_index].favorite = favorite if favorite else contacts[relative_index].favorite
     print(f"{contacts[relative_index].name} updated!")
 
+def delete_contact(index):
+    relative_index  = int(index) - 1
+    name = ""
+    if relative_index >= 0 and relative_index < len(contacts):
+        contact = contacts[relative_index]
+        name = contact.name
+        contacts.remove(contact)
+    print(f"Contact {name} deleted!")
+
     
