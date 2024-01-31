@@ -1,14 +1,5 @@
 import notebook
 
-"""
-- Deve ser possível adicionar um contato x
-- Deve ser possível visualizar a lista de contatos cadastrados x
-- Deve ser possível editar um contato 
-- Deve ser possível marcar/desmarcar um contato como favorito x
-- Deve ser possível ver uma lista de contatos favoritos x
-- Deve ser possível apagar um contato x
-"""
-
 while True:
     print("========== Notebook ==========")
     print("""---------- Menu ----------
