@@ -8,7 +8,7 @@ def add_contact(name, phone, email, favorite=False):
     print(f"{contact.name} added as a new contact!")
 
 def list_contacts():
-    if len(contacts) > 0: # indice, tarefa in enumerate(tarefas, start=1):
+    if len(contacts) > 0:
         for index, contact in enumerate(contacts, start=1):
             print(f"{index} - ", contact.to_string())
     else:
@@ -23,6 +23,17 @@ def list_favorites():
 
     if favorites == 0:
         print("You have no favorites!")
+
+def list_not_favorites():
+    not_favorites = 0
+    for index, contact in enumerate(contacts, start=1):
+        if contact.favorite == False:
+            not_favorites += 1
+            print(f"{index} - ", contact.to_string())
+
+    if not_favorites == 0:
+        print("All contacts are favorites!")
+
 
 def edit_contact(index, name, phone, email, favorite=False):
     relative_index  = int(index) - 1
@@ -44,13 +55,13 @@ def delete_contact(index):
 
     print(f"Contact {name} deleted!")
 
-def set_as_favorite(index):
+def add_to_favorite(index):
     relative_index  = int(index) - 1
     if relative_index >= 0 and relative_index < len(contacts):
         contacts[relative_index].set_favorite()
         print(f"{contacts[relative_index].name} is now favorite!")
 
-def unset_as_favorite(index):
+def remove_from_favorite(index):
     relative_index  = int(index) - 1
     if relative_index >= 0 and relative_index < len(contacts):
         contacts[relative_index].unset_favorite()
