@@ -12,12 +12,16 @@ def list_contacts():
         for contact in contacts:
             print(contact.to_string() + "\n")
     else:
-        print("No contacts")
+        print("You have no contacts!")
 
 def list_favorites():
+    favorites = 0
     for contact in contacts:
-        if contact.get_favorite():
+        if contact.favorite:
+            favorites += 1
             print(contact.to_string() + "\n")
+        elif favorites == 0:
+            print("You have no favorites!")
 
 def edit_contact(index, name, phone, email, favorite=False):
     relative_index  = int(index) - 1
