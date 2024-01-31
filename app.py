@@ -39,6 +39,18 @@ while True:
         notebook.list_favorites()
         print("****************************\n")
 
+    elif option == "4":
+        print("OPTION", option)
+
+    elif option == "5":
+        print("OPTION", option)
+
+    elif option == "6":
+        print("OPTION", option)
+
+    elif option == "7":
+        print("OPTION", option)
+
     elif option == "8":
         break
 

@@ -8,19 +8,19 @@ def add_contact(name, phone, email, favorite=False):
     print(f"{contact.name} added as a new contact!")
 
 def list_contacts():
-    if len(contacts) > 0:
-        for contact in contacts:
-            print(contact.to_string())
+    if len(contacts) > 0: # indice, tarefa in enumerate(tarefas, start=1):
+        for index, contact in enumerate(contacts, start=1):
+            print(f"{index} - ", contact.to_string())
     else:
         print("You have no contacts!\n")
 
 def list_favorites():
     favorites = 0
-    for contact in contacts:
+    for index, contact in enumerate(contacts, start=1):
         if contact.favorite:
             favorites += 1
-            print(contact.to_string())
-            
+            print(f"{index} - ", contact.to_string())
+
     if favorites == 0:
         print("You have no favorites!")
 
